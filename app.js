@@ -1,6 +1,5 @@
 import express from 'express';
-import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
+// import mongoose from 'mongoose';
 
 import routes from './routes/index.js';
 
@@ -9,7 +8,7 @@ const app = express();
 /**
  * Connect to the database
  */
-mongoose.connect('mongodb://localhost');
+// mongoose.connect('mongodb://localhost');
 
 /**
  * Middleware
