@@ -1,12 +1,16 @@
 import TwitchJS from 'twitch-js';
 require('dotenv').config('../.env'); //configuring dotenv file
 const request = require('request');
+import axios from 'axios';
+import { response } from 'express';
+
 // 516575 Valorant game id
 // for queries. put ? before. eg. streams?game_id=516575
 
 export async function getTopGames(){
 
     async function gameRequest(accessToken){
+
         const gameOptions = {
             url: 'https://api.twitch.tv/helix/games/top',
             method: 'GET',
@@ -21,17 +25,15 @@ export async function getTopGames(){
         }else{
             console.log("GameOption", gameOptions);
 
-            const gameRequest = async() => request.get(gameOptions, async (err, res, body) => {
+            request.get(gameOptions, async (err, res, body) => {
                 if (err) {
                     return console.log(err);
                 }
 
                 console.log(`Status: ${res.statusCode}`);
                 console.log(JSON.parse(body));
-                return await body;
             });
             
-            const ress = await gameRequest();
         };
     }
 
@@ -52,7 +54,9 @@ export async function getTopGames(){
         console.log(`Status: ${res.statusCode}`);
         console.log("Access token",body.access_token);
         return await gameRequest(body.access_token);
+        // console.log("asdasd...", await gameRequest(body.access_token));
     });
 
-    await mainRequest();
+    const anss = await mainRequest();
+    console.log("anss", anss);
 }
