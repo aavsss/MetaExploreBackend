@@ -1,12 +1,12 @@
-import twitchStreamer from '../controllers/twitchController';
+import {getAllTwitchStreamers, createTwitchStreamer, getTwitchStreamer, updateTwitchStreamer, deleteTwitchStreamer} from '../controllers/twitchController.js';
 
 export default (app) => {
     app.route('/twitchStreamers')
-        .get(twitchStreamer.getAllTwitchStreamers)
-        .post(twitchStreamer.createTwitchStreamer);
+        .get(getAllTwitchStreamers)
+        .post(createTwitchStreamer);
 
     app.route('/twitchStreamers/:twitchStreamerID')
-        .get(twitchStreamer.getTwitchStreamer)
-        .put(twitchStreamer.updateTwitchStreamer)
-        .delete(twitchStreamer.deleteTwitchStreamer);
+        .get(getTwitchStreamer)
+        .put(updateTwitchStreamer)
+        .delete(deleteTwitchStreamer);
 };

@@ -1,9 +1,11 @@
 import TwitchJS from 'twitch-js';
-require('dotenv').config('../.env'); //configuring dotenv file
-const request = require('request');
+import request from 'request';
+import dotenv from 'dotenv';
 import axios from 'axios';
 import { response } from 'express';
 
+// require('dotenv').config('../.env'); //configuring dotenv file
+dotenv.config('../.env');//configuring dotenv file
 // 516575 Valorant game id
 // for queries. put ? before. eg. streams?game_id=516575
 

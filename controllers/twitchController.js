@@ -1,12 +1,13 @@
 // import twitchStreamer from '../models/twitchModel';
-import {getTopGames} from '../services/twichServices.js'
-const request = require('request');
+import { getTopGames } from '../services/twichServices.js'
+import request from 'request';
+// const request = require('request');
 
-exports.getTwitchStreamer = (req, res) => {
+export const getTwitchStreamer = (req, res) => {
     
 };
 
-exports.getAllTwitchStreamers = async (req, response) => {
+export const getAllTwitchStreamers = async (req, response) => {
     // const games = await getTopGames();
     // console.log("games.....", games)
     // res.json(games);
@@ -60,14 +61,15 @@ exports.getAllTwitchStreamers = async (req, response) => {
 
 };
 
-exports.createTwitchStreamer = (req, res) => {
+export const createTwitchStreamer = (req, res) => {
 
 };
 
-exports.updateTwitchStreamer = (req, res) => {
+export const updateTwitchStreamer = (req, res) => {
 
 };
 
-exports.deleteTwitchStreamer = (req, res) => {
+export const deleteTwitchStreamer = (req, res) => {
 
 };
+

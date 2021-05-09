@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Using Twitch's metadata search to find streamers ",
   "main": "server.js",
+  "type":"module",
   "scripts": {
     "start": "node server.js --exec babel-node --presets env",
     "start:dev":"nodemon server.js --exec babel-node --presets env",
