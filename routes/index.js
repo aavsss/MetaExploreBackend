@@ -5,7 +5,7 @@ export default (app) => {
         .get(getAllTwitchStreamers)
         .post(createTwitchStreamer);
 
-    app.route('/twitchStreamers/:twitchStreamerID')
+    app.route('/twitchStreamers/twitchStreamerName')
         .get(getTwitchStreamer)
         .put(updateTwitchStreamer)
         .delete(deleteTwitchStreamer);
